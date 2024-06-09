@@ -2,5 +2,5 @@ pandas
 numpy
 Flask
 Flask-Cors
-dotenv
+python-dotenv
 redis
