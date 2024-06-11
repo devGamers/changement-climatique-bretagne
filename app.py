@@ -91,10 +91,11 @@ def load_and_cache_data():
     except Exception as e:
         print(f"Erreur lors du chargement du dataset de CO2: {e}")
 
-# Précharger et mettre en cache les données
-load_and_cache_data()
 
 def create_app():
+    # Précharger et mettre en cache les données
+    load_and_cache_data()
+
     app = Flask(__name__)
     CORS(app)
 
@@ -331,6 +332,6 @@ def create_app():
 
     return app
 
-if __name__ == "__main__":
-    app = create_app()
-    app.run(host="0.0.0.0", port=8082, debug = os.getenv("ENV") == "development")
+#if __name__ == "__main__":
+#    app = create_app()
+#    app.run(host="0.0.0.0", port=8082, debug = os.getenv("ENV") == "development")
